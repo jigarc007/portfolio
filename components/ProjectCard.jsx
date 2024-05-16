@@ -6,7 +6,7 @@ import { Badge } from "./ui/badge";
 import { Link2Icon } from "lucide-react";
 export default function ProjectCard({ project }) {
   return (
-    <Card className="group overflow-hidden relative mb-2 min-h-[550px]">
+    <Card className="group overflow-hidden relative mb-2 min-h-[680px] xl:min-h-[550px]">
       <CardHeader className="p-0">
         <div className="relative w-full h-[300px] flex items-center justify-center bg-tertiary dark:bg-secondary/40 xl:bg-work_project_bg_light xl:dark:bg-work_project_bg_dark xl:bg-[110%] xl:bg-no-repeat overflow-hidden">
           <Image
