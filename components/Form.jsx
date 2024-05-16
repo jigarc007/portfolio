@@ -93,7 +93,7 @@ function Form() {
         />
       </div>
       <Button className="flex items-center gap-x-1 max-w-[166px]">
-        Let's talk
+        {`Let's talk`}
         <ArrowRightIcon size={20} />
       </Button>
       <ToastContainer position="top-right" />

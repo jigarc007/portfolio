@@ -33,7 +33,7 @@ const projectData = [
         project called CIMA. It is a disaster recovery management
         application based on React and I developed the Project
         lead module with UI and APIs integration.`,
-    link: "https://survey.communitydataplatforms.com/",
+    link: "/",
   },
   {
     image: "/work/3.png",
