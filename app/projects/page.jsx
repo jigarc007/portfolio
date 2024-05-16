@@ -44,6 +44,13 @@ const projectData = [
         highchart.`,
     link: "https://survey.communitydataplatforms.com/",
   },
+  {
+    image: "/work/4.png",
+    category: "Node js",
+    name: "Slackbot",
+    description: `Worked on a project called SlackBot in node js with firebase database where I used the slack API for creating/Broadcasting leads in lead bot slack channel whenever visitors visit the site as well as create the slack UI that can work as a command in Slack.`,
+    link: "/",
+  },
 ];
 
 const uniqueCategories = [
@@ -54,13 +61,11 @@ const uniqueCategories = [
 export default function Projects() {
   const [categories, setCategories] = useState(uniqueCategories);
   const [category, setCategory] = useState("all projects");
-  console.log({ category });
   const filterProjectData = projectData?.filter((project) => {
     return category === "all projects"
       ? project
       : project.category === category;
   });
-  console.log({ filterProjectData });
   return (
     <section className="min-h-screen pt-12">
       <div className="container mx-auto">
@@ -70,7 +75,7 @@ export default function Projects() {
         </h2>
 
         <Tabs defaultValue={category} className="mb-24 xl:mb-48">
-          <TabsList className="w-full grid h-full md:grid-cols-4 lg:max-w-[640px] mb-12 mx-auto md:border dark:border-none ">
+          <TabsList className="w-full grid h-full md:grid-cols-5 lg:max-w-[640px] mb-12 mx-auto md:border dark:border-none ">
             {categories.map((item, index) => {
               return (
                 <TabsTrigger

@@ -19,12 +19,11 @@ export default function Hero() {
         <div className="flex justify-between gap-x-8">
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
             <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
-              Web Developer
+              Full Stack Developer
             </div>
             <h1 className="h1 mb-4">Hello, my name is Jigar Chauhan</h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-              Brief description with insights into myself, my vocational
-              journey, and what I engage in professionally.
+              I build things for the web.
             </p>
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
               <Link href="/contact">
@@ -50,7 +49,7 @@ export default function Hero() {
             <Badge
               containerStyles={"absolute top-[24%] -left-[5rem]"}
               icon={<RiBriefcase4Fill />}
-              endCountNum={5}
+              endCountNum={"4"}
               endCountText={"Years Of Experience"}
             />
             <Badge

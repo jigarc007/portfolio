@@ -16,13 +16,12 @@ function Form() {
     if (captcha) {
       const formData = {};
       Array.from(e.currentTarget.elements).forEach((field) => {
-        console.log({ field });
         if (!field.id) return;
         formData[field.id] = field.value;
       });
       console.log({ formData });
       if (formData?.email && formData?.name && formData?.message) {
-        console.log("seding the mail------------------------------------>");
+        console.log("sending the mail...");
         await sendMail({
           to: formData.email,
           body: `<html>

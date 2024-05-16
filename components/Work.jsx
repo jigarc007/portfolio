@@ -49,6 +49,13 @@ const projectData = [
         highchart.`,
     link: "https://survey.communitydataplatforms.com/",
   },
+  {
+    image: "/work/4.png",
+    category: "Node js",
+    name: "Slackbot",
+    description: `Worked on a project called SlackBot in node js with firebase database where I used the slack API for creating/Broadcasting leads in lead bot slack channel whenever visitors visit the site as well as create the slack UI that can work as a command in Slack.`,
+    link: "/",
+  },
 ];
 
 function Work() {

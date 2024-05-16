@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import DevImage from "./DevImage";
 import Image from "next/image";
 import {
@@ -37,6 +38,8 @@ import agGridLogo from "../public/skills/aggrid.png";
 import d3jsLogo from "../public/skills/d3js.svg";
 import mapBoxLogo from "../public/skills/mapbox.png";
 import highChartLogo from "../public/skills/highchart.png";
+import herokuLogo from "../public/skills/heroku.png";
+import jestLogo from "../public/skills/jest.png";
 
 import {
   User2,
@@ -76,12 +79,12 @@ const qualificationData = [
       {
         university: "Veer Narmad South Gujarat University",
         qualification: "BCA(Bachelor of Computer Applications)",
-        years: "2015 - 2017",
+        years: "2014 - 2017",
       },
       {
         university: "Veer Narmad South Gujarat University",
         qualification: "MCA(Master of Computer Applications)",
-        years: "2017 - 2019",
+        years: "2017 - 2020",
       },
     ],
   },
@@ -91,17 +94,17 @@ const qualificationData = [
       {
         company: "La Net Team Software Solutions Pvt. LTD.",
         role: "Software Developer",
-        years: "2019 - 2021",
+        years: "2020 - 2022",
       },
       {
         company: "Pabau",
         role: "Full-Stack developer",
-        years: "2021 - 2022",
+        years: "2022 - 2023",
       },
       {
         company: "Emgage",
         role: "Front-end Developer",
-        years: "2022 - 2024",
+        years: "2023 - Prensent",
       },
     ],
   },
@@ -269,6 +272,18 @@ const skillData = [
       },
       {
         imagePath: (
+          <Image width={20} height={20} src={jestLogo} alt="redux" priority />
+        ),
+        name: "Jest",
+      },
+      {
+        imagePath: (
+          <Image width={20} height={20} src={herokuLogo} alt="redux" priority />
+        ),
+        name: "Heroku",
+      },
+      {
+        imagePath: (
           <Image width={20} height={20} src={agGridLogo} alt="redux" priority />
         ),
         name: "Ag Grid",
@@ -321,14 +336,17 @@ function About() {
   const getData = (arr, title) => {
     return arr.find((item) => item.title === title);
   };
-  debugger;
   const experienceData = getData(qualificationData, "Experience");
   const educationData = getData(qualificationData, "Education");
   const skillFilterData = getData(skillData, "skills");
   const skillToolData = getData(skillData, "tools");
-  console.log({ experienceData });
+  const [currentTab, setCurrentTab] = useState("Personal info");
   return (
-    <section className="xl:h-[860px] pb-12 xl:py-24">
+    <section
+      className={`xl:h-[${
+        currentTab === "Personal info" ? "1360px" : "860px"
+      }] pb-12 xl:py-24`}
+    >
       <div className="container mx-auto">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
           About me
@@ -337,7 +355,7 @@ function About() {
           <div className="hidden xl:flex flex-1 relative">
             <DevImage
               containerStyle={
-                "bg-about_shape_light dark:bg-about_shape_dark bg-no-repeat w-[505px] h-[505px] relative"
+                "top-[10%] bg-about_shape_light dark:bg-about_shape_dark bg-no-repeat w-[505px] h-[505px] relative"
               }
               imgSrc={"/about/developer.png"}
             />
@@ -345,30 +363,70 @@ function About() {
           <div className="flex-1">
             <Tabs defaultValue="personal">
               <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
-                <TabsTrigger className="w-[162px] xl:w-auto" value="personal">
+                <TabsTrigger
+                  className="w-[162px] xl:w-auto"
+                  value="personal"
+                  onClick={() => setCurrentTab("Personal info")}
+                >
                   Personal info
                 </TabsTrigger>
                 <TabsTrigger
                   className="w-[162px] xl:w-auto"
                   value="qualifications"
+                  onClick={() => setCurrentTab("Qualifications")}
                 >
                   Qualifications
                 </TabsTrigger>
-                <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
+                <TabsTrigger
+                  className="w-[162px] xl:w-auto"
+                  value="skills"
+                  onClick={() => setCurrentTab("Skills")}
+                >
                   Skills
                 </TabsTrigger>
               </TabsList>
               <div className="text-lg mt-12 xl:mt-8">
                 <TabsContent value="personal">
                   <div className="text-center xl:text-left">
-                    <h3 className="h3 mb-4">
-                      Unmatched Service Quality for Over 10 years
+                    <h3 className="h3 mb-2">
+                      I am Jigar,
+                      <br />
+                      Full Stack Developer
                     </h3>
-                    <p className="subtitle max-w-xl mx-auto xl:mx-0">
-                      I specialize in crafting intuitive website with
-                      cutting-edge technology, delivering dynamic and engaging
-                      user experiences.
+                    <p className="subtitle max-w-xl mx-auto xl:mx-0 flex flex-col gap-y-3">
+                      <span>
+                        {`With 4 years of experience in the tech industry, I've
+                      honed my skills in both frontend and backend development,
+                      allowing me to tackle projects from conception to
+                      deployment.`}
+                      </span>
+                      <span>
+                        {`On the frontend, I specialize in creating
+                      captivating user interfaces that not only look great but
+                      also provide an intuitive experience. I'm proficient in
+                      HTML, CSS, and JavaScript, and I stay up-to-date with the
+                      latest trends and frameworks like React js and Next js to ensure my projects are always cutting-edge.`}
+                      </span>
+                      <span>
+                        {`When it comes to the backend, I'm no stranger to building
+                      robust server-side architectures. I have work on the Node and Nest js as a backend developer.
+                       I'm experienced in working with databases like firebase, MySQL, MongoDB, and
+                      PostgreSQL.`}
+                      </span>
+                      <span>
+                        I thrive on overcoming challenges and optimizing code
+                        for efficiency. My penchant for logical problem-solving
+                        extends beyond the workplace, as I actively engage in
+                        platforms like Codewars to sharpen my skills.
+                        Furthermore, I take pride in assisting others and
+                        contributing to a collaborative environment wherever
+                        possible.
+                      </span>
                     </p>
+                    <div className="mb-3">
+                      <div className="text-primary mb-2">Contact Details</div>
+                      <div className="border-b border-border"></div>
+                    </div>
                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
                       {infoData?.map((item, index) => {
                         return (
@@ -476,10 +534,6 @@ function About() {
                               className="flex items-center text-center relative justify-center"
                               key={`${name}-${index}`}
                             >
-                              {/* <div className="font-medium">
-                                                    {name}
-                                                
-                                                </div> */}
                               <Badge
                                 variant="outline"
                                 className={
