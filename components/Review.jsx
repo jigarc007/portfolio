@@ -19,14 +19,14 @@ const reviewsData = [
   {
     avatar: "/reviews/avatar-5.png",
     name: "Saurabh joshi",
-    job: "Owner of emgage",
+    job: "Owner of Cimma",
     review:
       "Great experience. Would definitely work with Jigar again in the future!",
   },
   {
     avatar: "/reviews/avatar-3.png",
     name: "Peter marks",
-    job: "Owner of emgage",
+    job: "Owner of Real estate site",
     review:
       "Great experience. Would definitely work with Jigar again in the future!",
   },

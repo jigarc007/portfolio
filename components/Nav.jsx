@@ -8,7 +8,7 @@ const links = [
   { path: "/projects", name: "my projects" },
   { path: "/contact", name: "contact" },
 ];
-export default function Nav({ containerStyle, linkStyles, underLineStyles }) {
+export default function Nav({ containerStyle, linkStyles, underLineStyles, setSheetOpen ,isFromMobileNav }) {
   const path = usePathname();
   return (
     <nav className={`${containerStyle}`}>
@@ -18,6 +18,11 @@ export default function Nav({ containerStyle, linkStyles, underLineStyles }) {
             key={index}
             href={link.path}
             className={`capitalize ${linkStyles}`}
+            onClick={()=>{
+              if(isFromMobileNav){
+                setSheetOpen(false)
+              }
+            }}
           >
             {link.path === path && (
               <motion.span
