@@ -395,7 +395,7 @@ function About() {
                     </h3>
                     <p className="subtitle max-w-xl mx-auto xl:mx-0 flex flex-col gap-y-3">
                       <span>
-                        {`With 4 years of experience in the tech industry, I've
+                        {`With 5 years of experience in the tech industry, I've
                       honed my skills in both frontend and backend development,
                       allowing me to tackle projects from conception to
                       deployment.`}

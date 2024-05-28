@@ -49,19 +49,19 @@ export default function Hero() {
             <Badge
               containerStyles={"absolute top-[24%] -left-[5rem]"}
               icon={<RiBriefcase4Fill />}
-              endCountNum={"4"}
+              endCountNum={"5"}
               endCountText={"Years Of Experience"}
             />
             <Badge
               containerStyles={"absolute top-[80%] -left-[1rem]"}
               icon={<RiTodoFill />}
-              endCountNum={15}
+              endCountNum={6}
               endCountText={"Finished Project"}
             />
             <Badge
               containerStyles={"absolute top-[55%] -right-8"}
               icon={<RiTeamFill />}
-              endCountNum={15}
+              endCountNum={6}
               endCountText={"Happy Clients"}
             />
 
