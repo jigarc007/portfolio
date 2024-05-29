@@ -65,12 +65,12 @@ export default function Hero() {
               endCountText={"Happy Clients"}
             />
 
-            <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
+            <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-4 -right-10 rotate-[122deg]"></div>
             <DevImage
               containerStyle={
-                "bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
+                "light_profile.png w-[470px] h-[432px] bg-no-repeat relative bg-bottom"
               }
-              imgSrc={"/hero/developer.png"}
+              imgSrc={"/hero/color_profile.png"}
             />
           </div>
         </div>

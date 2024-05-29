@@ -17,7 +17,7 @@ import {
   FaPhp,
   FaBootstrap,
 } from "react-icons/fa";
-
+import { useTheme } from "next-themes";
 import {} from "@radix-ui/react-icons";
 import { Badge } from "./ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
@@ -333,6 +333,7 @@ const skillData = [
   },
 ];
 function About() {
+  const { theme } = useTheme();
   const getData = (arr, title) => {
     return arr.find((item) => item.title === title);
   };
@@ -355,9 +356,9 @@ function About() {
           <div className="hidden xl:flex flex-1 relative">
             <DevImage
               containerStyle={
-                "top-[10%] bg-about_shape_light dark:bg-about_shape_dark bg-no-repeat w-[505px] h-[505px] relative"
+                "top-[10%] bg-no-repeat w-[505px] h-[505px] relative"
               }
-              imgSrc={"/about/developer.png"}
+              imgSrc={`/about/${theme==='light'? 'light_profile': 'dark_profile'}.png`}
             />
           </div>
           <div className="flex-1">
